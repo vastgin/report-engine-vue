@@ -1,0 +1,49 @@
+{
+  "id": "website-traffic",
+  "name": "网站流量",
+  "fields": [
+    { "name": "date", "label": "日期", "dataType": "string", "role": "dimension" },
+    { "name": "channel", "label": "来源渠道", "dataType": "string", "role": "dimension" },
+    { "name": "device", "label": "设备", "dataType": "string", "role": "dimension" },
+    {
+      "name": "visits",
+      "label": "访问量",
+      "dataType": "number",
+      "role": "measure",
+      "aggregations": ["sum", "avg", "min", "max"],
+      "defaultAggregation": "sum"
+    },
+    {
+      "name": "uniqueVisitors",
+      "label": "独立访客",
+      "dataType": "number",
+      "role": "measure",
+      "aggregations": ["sum", "avg", "min", "max"],
+      "defaultAggregation": "sum"
+    },
+    {
+      "name": "conversions",
+      "label": "转化数",
+      "dataType": "number",
+      "role": "measure",
+      "aggregations": ["sum", "avg", "count", "min", "max"],
+      "defaultAggregation": "sum"
+    }
+  ],
+  "records": [
+    { "date": "周一", "channel": "自然搜索", "device": "桌面", "visits": 4200, "uniqueVisitors": 3100, "conversions": 120 },
+    { "date": "周一", "channel": "社交媒体", "device": "移动", "visits": 3600, "uniqueVisitors": 2900, "conversions": 90 },
+    { "date": "周二", "channel": "自然搜索", "device": "桌面", "visits": 4500, "uniqueVisitors": 3300, "conversions": 135 },
+    { "date": "周二", "channel": "付费广告", "device": "移动", "visits": 2800, "uniqueVisitors": 2400, "conversions": 110 },
+    { "date": "周三", "channel": "社交媒体", "device": "移动", "visits": 3900, "uniqueVisitors": 3000, "conversions": 98 },
+    { "date": "周三", "channel": "直接访问", "device": "桌面", "visits": 2100, "uniqueVisitors": 1700, "conversions": 75 },
+    { "date": "周四", "channel": "付费广告", "device": "桌面", "visits": 3200, "uniqueVisitors": 2600, "conversions": 140 },
+    { "date": "周四", "channel": "自然搜索", "device": "移动", "visits": 4700, "uniqueVisitors": 3500, "conversions": 150 },
+    { "date": "周五", "channel": "社交媒体", "device": "移动", "visits": 5100, "uniqueVisitors": 3900, "conversions": 160 },
+    { "date": "周五", "channel": "直接访问", "device": "桌面", "visits": 2400, "uniqueVisitors": 1900, "conversions": 82 },
+    { "date": "周六", "channel": "社交媒体", "device": "移动", "visits": 5600, "uniqueVisitors": 4300, "conversions": 175 },
+    { "date": "周六", "channel": "自然搜索", "device": "桌面", "visits": 3800, "uniqueVisitors": 2900, "conversions": 128 },
+    { "date": "周日", "channel": "付费广告", "device": "移动", "visits": 3000, "uniqueVisitors": 2500, "conversions": 118 },
+    { "date": "周日", "channel": "直接访问", "device": "桌面", "visits": 2200, "uniqueVisitors": 1800, "conversions": 70 }
+  ]
+}

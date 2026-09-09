@@ -1,0 +1,53 @@
+{
+  "id": "monthly-sales",
+  "name": "月度销售",
+  "fields": [
+    { "name": "month", "label": "月份", "dataType": "string", "role": "dimension" },
+    { "name": "region", "label": "区域", "dataType": "string", "role": "dimension" },
+    { "name": "category", "label": "品类", "dataType": "string", "role": "dimension" },
+    {
+      "name": "revenue",
+      "label": "销售额",
+      "dataType": "number",
+      "role": "measure",
+      "aggregations": ["sum", "avg", "min", "max"],
+      "defaultAggregation": "sum"
+    },
+    {
+      "name": "orders",
+      "label": "订单数",
+      "dataType": "number",
+      "role": "measure",
+      "aggregations": ["sum", "avg", "count", "min", "max"],
+      "defaultAggregation": "sum"
+    },
+    {
+      "name": "profit",
+      "label": "利润",
+      "dataType": "number",
+      "role": "measure",
+      "aggregations": ["sum", "avg", "min", "max"],
+      "defaultAggregation": "sum"
+    }
+  ],
+  "records": [
+    { "month": "1月", "region": "华东", "category": "家电", "revenue": 120000, "orders": 320, "profit": 24000 },
+    { "month": "1月", "region": "华北", "category": "家电", "revenue": 98000, "orders": 260, "profit": 18600 },
+    { "month": "1月", "region": "华南", "category": "服饰", "revenue": 76000, "orders": 410, "profit": 15200 },
+    { "month": "2月", "region": "华东", "category": "家电", "revenue": 132000, "orders": 350, "profit": 27000 },
+    { "month": "2月", "region": "华北", "category": "服饰", "revenue": 88000, "orders": 470, "profit": 17600 },
+    { "month": "2月", "region": "华南", "category": "食品", "revenue": 64000, "orders": 520, "profit": 12800 },
+    { "month": "3月", "region": "华东", "category": "服饰", "revenue": 145000, "orders": 610, "profit": 30500 },
+    { "month": "3月", "region": "华北", "category": "食品", "revenue": 72000, "orders": 580, "profit": 14400 },
+    { "month": "3月", "region": "华南", "category": "家电", "revenue": 110000, "orders": 300, "profit": 22000 },
+    { "month": "4月", "region": "华东", "category": "食品", "revenue": 83000, "orders": 640, "profit": 16600 },
+    { "month": "4月", "region": "华北", "category": "家电", "revenue": 126000, "orders": 330, "profit": 25200 },
+    { "month": "4月", "region": "华南", "category": "服饰", "revenue": 99000, "orders": 500, "profit": 19800 },
+    { "month": "5月", "region": "华东", "category": "家电", "revenue": 138000, "orders": 360, "profit": 28100 },
+    { "month": "5月", "region": "华北", "category": "服饰", "revenue": 91000, "orders": 480, "profit": 18200 },
+    { "month": "5月", "region": "华南", "category": "食品", "revenue": 68000, "orders": 540, "profit": 13600 },
+    { "month": "6月", "region": "华东", "category": "服饰", "revenue": 152000, "orders": 650, "profit": 31900 },
+    { "month": "6月", "region": "华北", "category": "食品", "revenue": 75000, "orders": 600, "profit": 15000 },
+    { "month": "6月", "region": "华南", "category": "家电", "revenue": 117000, "orders": 315, "profit": 23400 }
+  ]
+}
